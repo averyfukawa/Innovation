@@ -1,12 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\angel\.Rider2019.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\angel\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Innovation.604069396.00" t="ExcludeRecursive" />
-    <e p="C:\Users\angel\Desktop\Saxion\2.1 Innovation\Innovation" t="IncludeRecursive">
+    <e p="C:\Users\Gebruiker\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Gebruiker\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Innovation.2073202669.00" t="ExcludeRecursive" />
+    <e p="D:\School\Saxion\Y2Q2.1 Project Innovation\Innovation" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
+      <e p="Assembly-CSharp-firstpass.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="FMOD" t="Include">
+          <e p="Innovate-My-Sound" t="Include">
+            <e p="Metadata" t="Include">
+              <e p="Asset" t="Include">
+                <e p="{4b6401fb-9c64-4595-acf3-0c3afb2596d1}.xml" t="Include" />
+                <e p="{5ac14da3-5b36-46a9-b891-564929d64559}.xml" t="Include" />
+                <e p="{6f338255-cdf1-4cc0-aacc-be380f7f7f15}.xml" t="Include" />
+                <e p="{cbe1fe8d-8387-47e6-83ec-798232a48809}.xml" t="Include" />
+              </e>
+              <e p="AudioFile" t="Include">
+                <e p="{27622ee6-7020-47c4-a8f0-192884b4c1be}.xml" t="Include" />
+                <e p="{2a099cf7-ea8c-41ef-a19b-bd80e15b7681}.xml" t="Include" />
+                <e p="{aab4b05b-ff63-4011-839a-58e445a1a61a}.xml" t="Include" />
+                <e p="{b9493d06-3c57-4746-a91b-869f7bf1e30e}.xml" t="Include" />
+              </e>
+              <e p="Bank" t="Include">
+                <e p="{810ba543-8c8a-4328-bc4a-12b19b26646f}.xml" t="Include" />
+              </e>
+              <e p="BankFolder" t="Include">
+                <e p="{be56dea7-833d-4402-b05a-7707a21230d0}.xml" t="Include" />
+              </e>
+              <e p="EffectPresetFolder" t="Include">
+                <e p="{47ad28df-4d0a-40f0-82fb-f08fd89949fc}.xml" t="Include" />
+              </e>
+              <e p="EncodingSetting" t="Include">
+                <e p="{06e6c076-0dae-4b50-ad5c-ff00bfc5a1f5}.xml" t="Include" />
+              </e>
+              <e p="Event" t="Include">
+                <e p="{02af0a7a-5366-4191-878e-33ea5633ee83}.xml" t="Include" />
+                <e p="{0fea6ade-64cf-437e-a120-bd8a92123c29}.xml" t="Include" />
+                <e p="{0ff38082-cc14-417e-80f6-4384453acf81}.xml" t="Include" />
+                <e p="{100bca30-da08-45d5-82f7-9c6e9753b6e2}.xml" t="Include" />
+                <e p="{2916401c-4e1f-4363-b163-d874182ae174}.xml" t="Include" />
+                <e p="{2a451efe-eb49-448d-b3a9-5a287915c40c}.xml" t="Include" />
+                <e p="{389dc27e-143c-48cf-b44e-a49e8a8b5350}.xml" t="Include" />
+                <e p="{4ff4c287-1140-47b5-bcdb-7fb4011fa471}.xml" t="Include" />
+                <e p="{52481e4d-bfd0-40b9-bdfc-3e310f8cbb97}.xml" t="Include" />
+                <e p="{54bd9a73-bfe8-4264-ac51-665b433ad996}.xml" t="Include" />
+                <e p="{6e0dd8bc-68ba-4efa-99a2-49ee43c4c6e2}.xml" t="Include" />
+                <e p="{775edfdf-a653-421c-9cb3-1c224c389d5e}.xml" t="Include" />
+                <e p="{85cfe892-422d-49f2-ab6d-2ee099c7c68a}.xml" t="Include" />
+                <e p="{8b9bee64-dac8-4f1d-9456-2c4f13c3d31e}.xml" t="Include" />
+                <e p="{8de4ed4c-c04f-4f34-98c5-f05e96ba868d}.xml" t="Include" />
+                <e p="{8e17dc69-b23a-4e5e-9364-010a808f5a2c}.xml" t="Include" />
+                <e p="{9119a640-125d-4331-a3e0-1188bfc3fd8c}.xml" t="Include" />
+                <e p="{91b89a9f-b504-4a36-86e4-c0b14ddb80b6}.xml" t="Include" />
+                <e p="{93132e83-40fa-4c12-bb91-da0593a84826}.xml" t="Include" />
+                <e p="{9684f6f3-404f-44ce-95b9-3aa10bc885bb}.xml" t="Include" />
+                <e p="{9ed86f4a-4439-4349-9418-fd40f9859a73}.xml" t="Include" />
+                <e p="{9f93947b-90cd-405c-80b5-cf9b6974bf2f}.xml" t="Include" />
+                <e p="{b360720e-8094-4f7a-af68-ff899f739e8f}.xml" t="Include" />
+                <e p="{b6399364-b0c5-493c-b4a4-06f838d59700}.xml" t="Include" />
+                <e p="{c5a597e7-78d3-463b-befe-1240eb33c625}.xml" t="Include" />
+                <e p="{c619c006-4d72-443f-9b85-c863fa828752}.xml" t="Include" />
+                <e p="{cc567655-3489-4ba7-892a-9233e4e1d20c}.xml" t="Include" />
+                <e p="{cebc0f29-1d92-4993-8ff1-c45d7af86e40}.xml" t="Include" />
+                <e p="{d06e0aa3-04a4-4d5d-85b2-335eb2329d85}.xml" t="Include" />
+                <e p="{d2e3662e-225e-4261-bd2c-a7d4f094fce2}.xml" t="Include" />
+                <e p="{d37544d2-c121-426e-b999-2e657345f1cc}.xml" t="Include" />
+                <e p="{d54b0240-0328-4a01-89e7-e88db583699f}.xml" t="Include" />
+                <e p="{d6ce4d60-950e-4413-8804-5d58a4bd5a31}.xml" t="Include" />
+                <e p="{d8c70ce0-f63b-4924-a16c-68ca550c2286}.xml" t="Include" />
+                <e p="{dfd234bd-0ac2-4fc4-9a27-e8da3862f0db}.xml" t="Include" />
+                <e p="{e589677d-1468-40fa-9f15-a2c2f0cf087b}.xml" t="Include" />
+                <e p="{ead89d39-8bb8-4842-b483-82283e2795c8}.xml" t="Include" />
+                <e p="{ec92bd1c-ad6e-4ac9-8150-e6492a21afb6}.xml" t="Include" />
+                <e p="{edc05b14-ea2c-46b2-b496-33529e770f84}.xml" t="Include" />
+                <e p="{f1e408a8-ec01-4597-9581-b06ed61e2162}.xml" t="Include" />
+                <e p="{fa614bd5-0daf-4a0f-9740-d81c8b40d5e1}.xml" t="Include" />
+              </e>
+              <e p="EventFolder" t="Include">
+                <e p="{2617e75e-35f7-40dc-9765-0c5694db8c4c}.xml" t="Include" />
+                <e p="{4faf4478-be9c-413f-8b86-cd6bbf61519a}.xml" t="Include" />
+                <e p="{5eecea9f-034d-4c82-a8ff-910a17a3c71f}.xml" t="Include" />
+                <e p="{6ebd9f9c-16e7-462f-8927-bf1ccd5091c1}.xml" t="Include" />
+              </e>
+              <e p="Master.xml" t="Include" />
+              <e p="Mixer.xml" t="Include" />
+              <e p="ParameterPreset" t="Include">
+                <e p="{f5629815-635b-4801-8cc3-1cc7f7647cd5}.xml" t="Include" />
+              </e>
+              <e p="ParameterPresetFolder" t="Include">
+                <e p="{0601c53e-e128-4744-9814-ccd923006954}.xml" t="Include" />
+              </e>
+              <e p="Platform" t="Include">
+                <e p="{862ffacc-fe28-42b5-a49f-e0ff84ffcb43}.xml" t="Include" />
+              </e>
+              <e p="Return" t="Include">
+                <e p="{078ac89e-e44b-4ae4-9fcd-1d65e755c574}.xml" t="Include" />
+              </e>
+              <e p="SnapshotGroup" t="Include">
+                <e p="{79f8b2ed-0381-445b-80c3-e447c4f56bd1}.xml" t="Include" />
+              </e>
+              <e p="Tags.xml" t="Include" />
+              <e p="Workspace.xml" t="Include" />
+            </e>
+          </e>
+        </e>
         <e p="Oculus" t="Include">
           <e p="AudioManager" t="Include">
             <e p="Scenes" t="Include">
@@ -660,12 +760,85 @@
             </e>
           </e>
         </e>
+        <e p="Plugins" t="Include">
+          <e p="FMOD" t="Include">
+            <e p="addons" t="Include">
+              <e p="ResonanceAudio" t="Include">
+                <e p="Editor" t="Include">
+                  <e p="FmodResonanceAudioRoomEditor.cs" t="Include" />
+                </e>
+                <e p="Scripts" t="Include">
+                  <e p="FmodResonanceAudio.cs" t="Include" />
+                  <e p="FmodResonanceAudioRoom.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="src" t="Include">
+              <e p="Editor" t="Include">
+                <e p="BankRefDrawer.cs" t="Include" />
+                <e p="CreateEventPopup.cs" t="Include" />
+                <e p="EditorBankRef.cs" t="Include" />
+                <e p="EditorEventRef.cs" t="Include" />
+                <e p="EditorParamRef.cs" t="Include" />
+                <e p="EditorUtils.cs" t="Include" />
+                <e p="EventBrowser.cs" t="Include" />
+                <e p="EventCache.cs" t="Include" />
+                <e p="EventManager.cs" t="Include" />
+                <e p="EventRefDrawer.cs" t="Include" />
+                <e p="FindAndReplace.cs" t="Include" />
+                <e p="LogViewer.cs" t="Include" />
+                <e p="ParamRefDrawer.cs" t="Include" />
+                <e p="SettingsEditor.cs" t="Include" />
+                <e p="StudioBankLoaderEditor.cs" t="Include" />
+                <e p="StudioEventEmitterEditor.cs" t="Include" />
+                <e p="StudioEventEmitterGizmoDrawer.cs" t="Include" />
+                <e p="StudioGlobalParameterTriggerEditor.cs" t="Include" />
+                <e p="StudioListenerEditor.cs" t="Include" />
+                <e p="StudioParameterTriggerEditor.cs" t="Include" />
+                <e p="Timeline" t="Include">
+                  <e p="FMODEventPlayableEditor.cs" t="Include" />
+                </e>
+              </e>
+              <e p="Runtime" t="Include">
+                <e p="BankRefAttribute.cs" t="Include" />
+                <e p="EventHandler.cs" t="Include" />
+                <e p="EventRefAttribute.cs" t="Include" />
+                <e p="FMODRuntimeManagerOnGUIHelper.cs" t="Include" />
+                <e p="ParamRef.cs" t="Include" />
+                <e p="ParamRefAttribute.cs" t="Include" />
+                <e p="RuntimeManager.cs" t="Include" />
+                <e p="RuntimeUtils.cs" t="Include" />
+                <e p="Settings.cs" t="Include" />
+                <e p="StudioBankLoader.cs" t="Include" />
+                <e p="StudioEventEmitter.cs" t="Include" />
+                <e p="StudioGlobalParameterTrigger.cs" t="Include" />
+                <e p="StudioListener.cs" t="Include" />
+                <e p="StudioParameterTrigger.cs" t="Include" />
+                <e p="Timeline" t="Include">
+                  <e p="FMODEventPlayable.cs" t="Include" />
+                  <e p="FMODEventTrack.cs" t="Include" />
+                </e>
+                <e p="wrapper" t="Include">
+                  <e p="fmod.cs" t="Include" />
+                  <e p="fmod_android.cs" t="Include" />
+                  <e p="fmod_dsp.cs" t="Include" />
+                  <e p="fmod_errors.cs" t="Include" />
+                  <e p="fmod_studio.cs" t="Include" />
+                </e>
+              </e>
+            </e>
+          </e>
+        </e>
         <e p="Resources" t="Include">
           <e p="Outliner" t="Include">
             <e p="AutoLoadPipelineAsset.cs" t="Include" />
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Audio Scripts" t="Include">
+            <e p="BKM.cs" t="Include" />
+            <e p="SFX.cs" t="Include" />
+          </e>
           <e p="Balloon.cs" t="Include" />
           <e p="BalloonGameHandler.cs" t="Include" />
           <e p="ExistanceTime.cs" t="Include" />
