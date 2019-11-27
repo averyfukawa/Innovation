@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Gebruiker\.Rider2019.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Gebruiker\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Innovation.2073202669.00" t="ExcludeRecursive" />
-    <e p="D:\School\Saxion\Y2Q2.1 Project Innovation\Innovation" t="IncludeRecursive">
+    <e p="C:\Users\angel\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\angel\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Innovation.604069396.00" t="ExcludeRecursive" />
+    <e p="C:\Users\angel\Desktop\Saxion\2.1 Innovation\Innovation" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -660,6 +660,11 @@
             </e>
           </e>
         </e>
+        <e p="Resources" t="Include">
+          <e p="Outliner" t="Include">
+            <e p="AutoLoadPipelineAsset.cs" t="Include" />
+          </e>
+        </e>
         <e p="Scripts" t="Include">
           <e p="Balloon.cs" t="Include" />
           <e p="BalloonGameHandler.cs" t="Include" />
@@ -668,11 +673,9 @@
           <e p="ThatsMeText.cs" t="Include" />
         </e>
         <e p="Shaders" t="Include">
-          <e p="CustomOutlineEffect.shader" t="Include" />
-          <e p="CustomOutlineObject.shader" t="Include" />
-          <e p="OutlinePostEffect.cs" t="Include" />
-          <e p="SobelFilter.shader" t="Include" />
-          <e p="ToonBasicOutline.shader" t="Include" />
+          <e p="Outline" t="Include">
+            <e p="Outline.shader" t="Include" />
+          </e>
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
