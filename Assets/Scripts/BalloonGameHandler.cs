@@ -8,6 +8,10 @@ public class BalloonGameHandler : MonoBehaviour
 {
     [SerializeField] GameObject _balloonPrefab;
     [SerializeField] GameObject _player;
+    [SerializeField] Basket _basket;
+    [SerializeField] float spawnRange;
+    [SerializeField] float spawnHeight = 6;
+    [SerializeField] float spawnHeightRange = 3;
     List<Balloon> _balloons;
     
     [Tooltip("Spawn rate 1 means that only necessary balloons spawn, spawn rate 2 means that double of the required balloons spawn")]
@@ -39,40 +43,27 @@ public class BalloonGameHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if(Input.GetKeyDown(KeyCode.S))
-        //{
-        //    _balloons.Add(SpawnBalloon(new Vector3(Random.Range(-2, 2), Random.Range(0.5f, 2.5f), Random.Range(-2, 2)), ''));
-        //}
-
         if (Input.GetKeyDown(KeyCode.P)) Debug.Break();
 
-        RaycastHit hit;
-        //Debug.DrawRay(player.transform.position, player.transform.forward, Color.red);
-        if (Input.GetMouseButton(0) && Physics.Raycast(_player.transform.position, _player.transform.forward, out hit))
+        if(_basket.balloonsCaught.Count > 0)
         {
-            Balloon balloon;
-            if (hit.transform.gameObject.TryGetComponent<Balloon>(out balloon))
+            for(int i = 0; i < _basket.balloonsCaught.Count; i++)
             {
-                if(!CollectLetter(balloon.letter) && !_anyOrder && words[currentWord].Contains(balloon.letter.ToString()))
-                {
-                    float spawnX = Random.Range(0, 2);
-                    float spawnZ = Random.Range(0, 2);
-
-                    if (spawnX == 0) spawnX = Random.Range(1.0f, 3.0f);
-                    else spawnX = Random.Range(-1.0f, -3.0f);
-                    if (spawnZ == 0) spawnZ = Random.Range(1.0f, 3.0f);
-                    else spawnZ = Random.Range(-1.0f, -3.0f);
-
-                    SpawnBalloon(new Vector3(spawnX, Random.Range(1.0f, 2.5f), spawnZ), balloon.letter);
-                }
-                Destroy(balloon);
-                _balloons.Remove(balloon);
+                CatchBalloon(_basket.balloonsCaught[i]);
             }
+            _basket.balloonsCaught.Clear();
         }
 
         for (int i = 0; i < _balloons.Count; i++)
         {
             _balloons[i].Move();
+            if(_balloons[i].transform.position.y < 0)
+            {
+                Debug.Log("Spawning balloon because y < 0");
+                SpawnBalloon(_balloons[i].letter);
+                Destroy(_balloons[i]);
+                _balloons.RemoveAt(i);
+            }
         }
 
         if (currentWord < words.Length)
@@ -100,15 +91,8 @@ public class BalloonGameHandler : MonoBehaviour
         for(int i = 0; i < words[currentWord].Length; i++)
         {
             _collectedLetters.Add(false);
-            float spawnX = Random.Range(0, 2);
-            float spawnZ = Random.Range(0, 2);
-
-            if (spawnX == 0) spawnX = Random.Range(1.0f, 3.0f);
-            else spawnX = Random.Range(-1.0f, -3.0f);
-            if (spawnZ == 0) spawnZ = Random.Range(1.0f, 3.0f);
-            else spawnZ = Random.Range(-1.0f, -3.0f);
-
-           SpawnBalloon(new Vector3(spawnX, Random.Range(1.0f, 2.5f), spawnZ), words[currentWord][i]);
+            
+           SpawnBalloon(words[currentWord][i]);
         }
     }
 
@@ -120,6 +104,37 @@ public class BalloonGameHandler : MonoBehaviour
         _balloons.Add(balloonScript);
 
         return balloonScript;
+    }
+
+    Balloon SpawnBalloon(char pChar)
+    {
+        float spawnX = Random.Range(0, 2);
+        float spawnZ = Random.Range(0, 2);
+
+        if (spawnX == 0) spawnX = spawnRange;
+        else spawnX = -spawnRange;
+        if (spawnZ == 0) spawnZ = spawnRange;
+        else spawnZ = -spawnRange;
+
+        Vector2 spawnPos = new Vector2(spawnX, spawnZ);
+        spawnPos.Normalize();
+        spawnPos.x *= spawnRange;
+        spawnPos.y *= spawnRange;
+
+        return SpawnBalloon(new Vector3(spawnPos.x, Random.Range(spawnHeight-spawnHeightRange, spawnHeight+spawnHeightRange), spawnPos.y), pChar);
+    }
+
+    bool CatchBalloon(Balloon balloon, int pIndex = -1)
+    {
+        bool correct = CollectLetter(balloon.letter);
+
+        balloon.prefab.transform.parent = _player.transform;
+        balloon.beingHeld = true;
+        balloon.hasCorrectLetter = correct;
+        balloon.rigidBody.useGravity = false;
+        Debug.Log("added to player");
+
+        return correct;
     }
 
     bool CollectLetter(char letter)
@@ -138,7 +153,7 @@ public class BalloonGameHandler : MonoBehaviour
         }
         else
         {
-            Debug.Log("should collect: " + words[currentWord][_currentLetter] + " collected " + letter);
+            Debug.Log("to collect: " + words[currentWord][_currentLetter] + " found " + letter);
             if (letter == words[currentWord][_currentLetter])
             {
                 _currentLetter++;
@@ -174,6 +189,6 @@ public class BalloonGameHandler : MonoBehaviour
             uiWord.text = words[currentWord];
         }
         
-        if (words.Length > currentWord) LoadNewWord();
+        //if (words.Length > currentWord) LoadNewWord();
     }
 }
