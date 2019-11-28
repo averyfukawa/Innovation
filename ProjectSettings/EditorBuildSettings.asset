@@ -6,12 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/BalloonGameTest.unity
+    guid: 25d10241a6c610e4fbfbd72efdb81d2f
+  - enabled: 1
     path: Assets/Oculus/VR/Scenes/GearVrControllerTest.unity
     guid: d56af3aeb2176e7459f753c1c2e2dd97
   - enabled: 1
     path: Assets/Scenes/mainMenu.unity
     guid: f46b2cd33f110194584f2b3d86755755
-  - enabled: 1
-    path: Assets/Scenes/BalloonGame.unity
-    guid: 25d10241a6c610e4fbfbd72efdb81d2f
   m_configObjects: {}
