@@ -7,19 +7,28 @@ public class Balloon : MonoBehaviour
 {
     public GameObject prefab;
     public TextMeshPro textMesh;
+    public Rigidbody rigidBody;
     public float timeOfExistance = 0;
     private float addToTime;
     public Vector3 position;
     public Vector3 wavyPosition;
     public char letter;
+    public float waveAmountX = 0f;
+    public float waveAmountY = 0f;
+    private Vector3 _facingTowards;
+    public bool beingHeld = false;
+    public bool hasCorrectLetter = false;
 
     public void Init(GameObject go, Vector3 pPos, Vector3 facing, TextMeshPro pTextMesh, char pChar)
     {
+        rigidBody = this.GetComponent<Rigidbody>();
         prefab = go;
         position = pPos;
 
         Vector3 difference = position - facing;
         prefab.transform.Rotate(new Vector3(0, Mathf.Rad2Deg * Mathf.Atan2(difference.x, difference.z) , 0));
+
+        _facingTowards = facing;
         addToTime = Random.Range(0, Mathf.PI);
 
         letter = pChar;
@@ -32,7 +41,6 @@ public class Balloon : MonoBehaviour
 
     void Start()
     {
-
     }
 
     // Update is called once per frame
@@ -43,11 +51,13 @@ public class Balloon : MonoBehaviour
 
     public void Move()
     {
-        float wavyX = Mathf.Sin(timeOfExistance / 3);
-        float wavyZ = Mathf.Cos(timeOfExistance) * 0.3f;
-        wavyPosition = new Vector3(wavyX, wavyX*wavyZ, wavyZ);
+        if (beingHeld) return;
+        float wavyX = Mathf.Cos(timeOfExistance+addToTime) * waveAmountX;
+        float wavyZ = Mathf.Sin(timeOfExistance+addToTime) * waveAmountY;
+        wavyPosition = new Vector3(wavyX, /*wavyX*wavyZ*/0, wavyZ);
 
-       prefab.transform.position = position + wavyPosition;
+        //position.y -= 0.008f;
+        prefab.transform.position = new Vector3(position.x + wavyPosition.x, prefab.transform.position.y, position.z + wavyPosition.z);
     }
 
     void OnDestroy()

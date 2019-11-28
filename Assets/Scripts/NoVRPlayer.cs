@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class NoVRPlayer : MonoBehaviour
 {
+    float _totalRotation;
+    [SerializeField] float maxLookUp = 90;
+    [SerializeField] float maxLookDown = 60;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +21,21 @@ public class NoVRPlayer : MonoBehaviour
         if (!Input.GetKey(KeyCode.Space))
         {
             this.transform.Rotate(Vector3.up, x, Space.World);
-            this.transform.Rotate(Vector3.right, -y);//, Space.World);
+            if (_totalRotation < maxLookUp && _totalRotation > -maxLookDown)
+            {
+                this.transform.Rotate(Vector3.right, -y);//, Space.World);
+                _totalRotation += y;
+            }
+            else if (_totalRotation > maxLookUp && y < 0)
+            {
+                this.transform.Rotate(Vector3.right, -y);//, Space.World);
+                _totalRotation += y;
+            }
+            else if (_totalRotation < -maxLookDown && y > 0)
+            {
+                this.transform.Rotate(Vector3.right, -y);//, Space.World);
+                _totalRotation += y;
+            }
 
             Cursor.lockState = CursorLockMode.Locked;
         }
