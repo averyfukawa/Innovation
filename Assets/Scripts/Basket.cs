@@ -5,6 +5,7 @@ using UnityEngine;
 public class Basket : MonoBehaviour
 {
     public Balloon caughtBalloon;
+    public bool holdsBalloon = false;
     public GameObject catchPosObject;
     public Vector3 catchPos;
 
@@ -17,19 +18,29 @@ public class Basket : MonoBehaviour
         }
     }
 
+    public void ClearBalloon()
+    {
+        caughtBalloon = null;
+        holdsBalloon = false;
+        Debug.Log("balloon: " + holdsBalloon);
+    }
+
     void OnTriggerEnter(Collider other)
     {
         Balloon balloon;
-        float catchRange = 1.0f;
-        if (caughtBalloon == null && other.gameObject.TryGetComponent<Balloon>(out balloon))
+        if (other.gameObject.TryGetComponent<Balloon>(out balloon))
         {
+            if (holdsBalloon == true)
+            {
+                Debug.Log("holds a balloon");
+                return;
+            }
             Vector3 difference = other.transform.position - catchPos;
-            Debug.Log("difference: " + other.transform.position.ToString() + " with " + catchPos);
-            Debug.Log("full differenc: " + difference.ToString());
             if (difference.y < 0) return;
 
-            Debug.Log("catch");
+            Debug.Log("caught balloon!");
             caughtBalloon = balloon;
+            holdsBalloon = true;
         }
     }
 }

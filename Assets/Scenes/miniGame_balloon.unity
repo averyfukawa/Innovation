@@ -720,8 +720,6 @@ MonoBehaviour:
   - blauw
   - rood
   currentWord: 0
-  uiWord: {fileID: 1099885424}
-  uiLetter: {fileID: 531718009}
   _displayWord: {fileID: 1172486948}
 --- !u!1 &654211503
 GameObject:
@@ -4133,6 +4131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   caughtBalloon: {fileID: 0}
+  holdsBalloon: 0
   catchPosObject: {fileID: 1500251761}
   catchPos: {x: 0, y: 0, z: 0}
 --- !u!135 &8874769897203303423
@@ -4159,8 +4158,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1
-  m_Center: {x: 42.56, y: 6.37, z: 0}
+  m_Radius: 6
+  m_Center: {x: 42.56, y: 2.62, z: 0}
 --- !u!1 &8967290729581546117
 GameObject:
   m_ObjectHideFlags: 0
