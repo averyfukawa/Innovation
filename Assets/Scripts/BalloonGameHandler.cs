@@ -29,6 +29,11 @@ public class BalloonGameHandler : MonoBehaviour
     
     [SerializeField] private TextMeshProUGUI uiWord; // UI displaying the word, can be changed to in-world later
     [SerializeField] private TextMeshProUGUI uiLetter; // this should be removed later, for the word to be faded out only
+    [SerializeField] private TextMeshPro _displayWord;
+
+    private bool _isDropping;
+    private bool _turningBack;
+    private float _turnBackTimer = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -44,14 +49,43 @@ public class BalloonGameHandler : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.P)) Debug.Break();
-
-        if(_basket.balloonsCaught.Count > 0)
+        if(Input.GetKeyDown(KeyCode.A) || _isDropping || _turningBack)
         {
-            for(int i = 0; i < _basket.balloonsCaught.Count; i++)
+            if(_turningBack == false) _isDropping = true;
+            if (_isDropping)
             {
-                CatchBalloon(_basket.balloonsCaught[i]);
+                _basket.transform.Rotate(10, 0, 0);
+                if (_basket.transform.rotation.eulerAngles.x >= 180)
+                {
+                    _basket.transform.rotation = Quaternion.Euler(180, _basket.transform.rotation.eulerAngles.y, 0);
+                    if (_basket.caughtBalloon != null)
+                    {
+                        _basket.caughtBalloon.rigidBody.freezeRotation = false;
+                        _basket.caughtBalloon.rigidBody.useGravity = true;
+                        _basket.caughtBalloon = null;
+                    }
+                    _turningBack = true;
+                    _isDropping = false;
+                }
             }
-            _basket.balloonsCaught.Clear();
+            Debug.Log(_turnBackTimer);
+            if (_turningBack && _turnBackTimer >= 4)
+            {
+                if (_basket.transform.rotation.eulerAngles.x <= 10)
+                {
+                    _basket.transform.rotation = Quaternion.Euler(0, _basket.transform.rotation.eulerAngles.y, 0);
+                    _turningBack = false;
+                    _turnBackTimer = 0;
+                }
+                else _basket.transform.Rotate(-10, 0, 0);
+            }
+            else if (_turningBack) _turnBackTimer += Time.deltaTime;
+        }
+        
+        if (_basket.caughtBalloon != null)
+        { 
+            Debug.Log("basket catch!");
+            CatchBalloon(_basket.caughtBalloon);
         }
 
         for (int i = 0; i < _balloons.Count; i++)
@@ -59,20 +93,10 @@ public class BalloonGameHandler : MonoBehaviour
             _balloons[i].Move();
             if(_balloons[i].transform.position.y < 0)
             {
-                Debug.Log("Spawning balloon because y < 0");
-                SpawnBalloon(_balloons[i].letter);
+                if(_balloons[i].hasCorrectLetter != true) SpawnBalloon(_balloons[i].letter);
                 Destroy(_balloons[i]);
                 _balloons.RemoveAt(i);
             }
-        }
-
-        if (currentWord < words.Length)
-        {
-            uiLetter.SetText("Letter: " + words[currentWord][_currentLetter]);
-        }
-        else
-        {
-            uiLetter.SetText("Letter: Finished (:");
         }
     }
 
@@ -86,6 +110,7 @@ public class BalloonGameHandler : MonoBehaviour
 
         _collectedLetters = new List<bool>();
         _currentLetter = 0;
+        _displayWord.text = words[currentWord];
 
         //spawn the needed balloons
         for(int i = 0; i < words[currentWord].Length; i++)
@@ -131,6 +156,7 @@ public class BalloonGameHandler : MonoBehaviour
         balloon.prefab.transform.parent = _player.transform;
         balloon.beingHeld = true;
         balloon.hasCorrectLetter = correct;
+        balloon.rigidBody.freezeRotation = true;
         balloon.rigidBody.useGravity = false;
         Debug.Log("added to player");
 
