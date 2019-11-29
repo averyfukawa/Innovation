@@ -8,7 +8,8 @@ public class BalloonGameHandler : MonoBehaviour
 {
     [SerializeField] GameObject _balloonPrefab;
     [SerializeField] GameObject _player;
-    [SerializeField] Basket _basket;
+    [SerializeField] Basket _catchingNet;
+    [SerializeField] BalloonCollecter _balloonCollecter;
     [SerializeField] float spawnRange;
     [SerializeField] float spawnHeight = 6;
     [SerializeField] float spawnHeightRange = 3;
@@ -23,77 +24,68 @@ public class BalloonGameHandler : MonoBehaviour
     [SerializeField] string[] words;
     [SerializeField] int currentWord = 0;
 
-    bool _anyOrder = false;
+    bool _anyOrder = true;
     int _currentLetter = 0;
     List<bool> _collectedLetters;
-    
-    [SerializeField] private TextMeshProUGUI uiWord; // UI displaying the word, can be changed to in-world later
-    [SerializeField] private TextMeshProUGUI uiLetter; // this should be removed later, for the word to be faded out only
+
     [SerializeField] private TextMeshPro _displayWord;
 
     private bool _isDropping;
-    private bool _turningBack;
-    private float _turnBackTimer = 0;
+    private float _droppingTimer = 0;
+    private bool caughtBalloon = false;
 
     // Start is called before the first frame update
     void Start()
     {
         _balloons = new List<Balloon>();
         LoadNewWord();
-
-        uiWord.text = words[currentWord];
-        uiLetter.SetText("Letter: " + words[currentWord][_currentLetter]);
     }
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.P)) Debug.Break();
-        if(Input.GetKeyDown(KeyCode.A) || _isDropping || _turningBack)
+        if (Input.GetKeyDown(KeyCode.A) || _isDropping || OVRInput.Get(OVRInput.Button.One))
         {
-            if(_turningBack == false) _isDropping = true;
-            if (_isDropping)
+            if (_catchingNet.holdsBalloon == true)
             {
-                _basket.transform.Rotate(10, 0, 0);
-                if (_basket.transform.rotation.eulerAngles.x >= 180)
-                {
-                    _basket.transform.rotation = Quaternion.Euler(180, _basket.transform.rotation.eulerAngles.y, 0);
-                    if (_basket.caughtBalloon != null)
-                    {
-                        _basket.caughtBalloon.rigidBody.freezeRotation = false;
-                        _basket.caughtBalloon.rigidBody.useGravity = true;
-                        _basket.caughtBalloon = null;
-                    }
-                    _turningBack = true;
-                    _isDropping = false;
-                }
+                _catchingNet.caughtBalloon.rigidBody.freezeRotation = false;
+                _catchingNet.caughtBalloon.rigidBody.useGravity = true;
+                _catchingNet.caughtBalloon.transform.parent = this.transform.parent;
+                _catchingNet.ClearBalloon();
+                _catchingNet.transform.gameObject.SetActive(false);
+                _isDropping = true;
             }
-            Debug.Log(_turnBackTimer);
-            if (_turningBack && _turnBackTimer >= 4)
+            if (_droppingTimer > 2)
             {
-                if (_basket.transform.rotation.eulerAngles.x <= 10)
-                {
-                    _basket.transform.rotation = Quaternion.Euler(0, _basket.transform.rotation.eulerAngles.y, 0);
-                    _turningBack = false;
-                    _turnBackTimer = 0;
-                }
-                else _basket.transform.Rotate(-10, 0, 0);
+                _droppingTimer = 0;
+                _isDropping = false;
+                _catchingNet.transform.gameObject.SetActive(true);
+                caughtBalloon = false;
             }
-            else if (_turningBack) _turnBackTimer += Time.deltaTime;
+            else _droppingTimer += Time.deltaTime;
         }
         
-        if (_basket.caughtBalloon != null)
+        if (_catchingNet.holdsBalloon && caughtBalloon == false)
         { 
-            Debug.Log("basket catch!");
-            CatchBalloon(_basket.caughtBalloon);
+            CatchBalloon(_catchingNet.caughtBalloon);
+            caughtBalloon = true;
         }
+
+        for(int i = 0; i < _balloonCollecter.collectedBalloons.Count; i++)
+        {
+            CollectLetter(_balloonCollecter.collectedBalloons[i].letter);
+            _balloons.Remove(_balloonCollecter.collectedBalloons[i]);
+            Destroy(_balloonCollecter.collectedBalloons[i]);
+        }
+        _balloonCollecter.collectedBalloons.Clear();
 
         for (int i = 0; i < _balloons.Count; i++)
         {
             _balloons[i].Move();
             if(_balloons[i].transform.position.y < 0)
             {
-                if(_balloons[i].hasCorrectLetter != true) SpawnBalloon(_balloons[i].letter);
+                SpawnBalloon(_balloons[i].letter);
                 Destroy(_balloons[i]);
                 _balloons.RemoveAt(i);
             }
@@ -110,15 +102,27 @@ public class BalloonGameHandler : MonoBehaviour
 
         _collectedLetters = new List<bool>();
         _currentLetter = 0;
-        _displayWord.text = words[currentWord];
+
+        string displayWord = "";
 
         //spawn the needed balloons
         for(int i = 0; i < words[currentWord].Length; i++)
         {
-            _collectedLetters.Add(false);
-            
-           SpawnBalloon(words[currentWord][i]);
+            if (Random.Range(0, 6) > 3 || (i == words[currentWord].Length - 1 && displayWord == ""))
+            {
+                _collectedLetters.Add(true);
+                displayWord += words[currentWord][i];
+            }
+            else
+            {
+                _collectedLetters.Add(false);
+
+                SpawnBalloon(words[currentWord][i]);
+                if (displayWord == "") _currentLetter = i;
+                displayWord += '_';
+            }
         }
+        _displayWord.text = displayWord;
     }
 
     Balloon SpawnBalloon(Vector3 pPos, char pChar)
@@ -151,19 +155,19 @@ public class BalloonGameHandler : MonoBehaviour
 
     bool CatchBalloon(Balloon balloon, int pIndex = -1)
     {
-        bool correct = CollectLetter(balloon.letter);
+        bool correct = CollectLetter(balloon.letter, false);
 
         balloon.prefab.transform.parent = _player.transform;
         balloon.beingHeld = true;
         balloon.hasCorrectLetter = correct;
         balloon.rigidBody.freezeRotation = true;
         balloon.rigidBody.useGravity = false;
-        Debug.Log("added to player");
+        Debug.Log("correct letter: " + correct);
 
         return correct;
     }
 
-    bool CollectLetter(char letter)
+    bool CollectLetter(char letter, bool addToWord = true)
     {
         if (_anyOrder)
         {
@@ -171,8 +175,19 @@ public class BalloonGameHandler : MonoBehaviour
             {
                 if (words[currentWord][i] == letter && _collectedLetters[i] == false)
                 {
-                    _collectedLetters[i] = true;
-                    CheckWin();
+                    if (addToWord)
+                    {
+                        string displayWord = "";
+                        for (int l = 0; l < _displayWord.text.Length; l++)
+                        {
+                            if (l != i) displayWord += _displayWord.text[l];
+                            else displayWord += letter;
+                        }
+                        _displayWord.text = displayWord;
+
+                        _collectedLetters[i] = true;
+                        CheckWin();
+                    }
                     return true;
                 }
             }
@@ -182,8 +197,21 @@ public class BalloonGameHandler : MonoBehaviour
             Debug.Log("to collect: " + words[currentWord][_currentLetter] + " found " + letter);
             if (letter == words[currentWord][_currentLetter])
             {
-                _currentLetter++;
-                if (_currentLetter == words[currentWord].Length) Win();
+                if (addToWord)
+                {
+                    _collectedLetters[_currentLetter] = true;
+
+                    string displayWord = "";
+                    for(int i = 0; i < _displayWord.text.Length; i++)
+                    {
+                        if (i != _currentLetter) displayWord += _displayWord.text[i];
+                        else displayWord += letter;
+                    }
+                    _displayWord.text = displayWord;
+
+                    _currentLetter++;
+                    if (_currentLetter == words[currentWord].Length) Win();
+                }
                 return true;
             }
             else return false;
@@ -210,11 +238,6 @@ public class BalloonGameHandler : MonoBehaviour
         Debug.Log("Win");
         currentWord++;
         
-        if (currentWord < words.Length)
-        {
-            uiWord.text = words[currentWord];
-        }
-        
-        //if (words.Length > currentWord) LoadNewWord();
+        if (words.Length > currentWord) LoadNewWord();
     }
 }
