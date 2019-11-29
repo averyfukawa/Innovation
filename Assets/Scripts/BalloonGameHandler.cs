@@ -8,7 +8,8 @@ public class BalloonGameHandler : MonoBehaviour
 {
     [SerializeField] GameObject _balloonPrefab;
     [SerializeField] GameObject _player;
-    [SerializeField] Basket _basket;
+    [SerializeField] Basket _catchingNet;
+    [SerializeField] BalloonCollecter _balloonCollecter;
     [SerializeField] float spawnRange;
     [SerializeField] float spawnHeight = 6;
     [SerializeField] float spawnHeightRange = 3;
@@ -44,43 +45,47 @@ public class BalloonGameHandler : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.P)) Debug.Break();
-        if (Input.GetKeyDown(KeyCode.A) || _isDropping)
+        if (Input.GetKeyDown(KeyCode.A) || _isDropping || OVRInput.Get(OVRInput.Button.One))
         {
-            if (_basket.holdsBalloon == true)
+            if (_catchingNet.holdsBalloon == true)
             {
-                _basket.caughtBalloon.rigidBody.freezeRotation = false;
-                _basket.caughtBalloon.rigidBody.useGravity = true;
-                _basket.caughtBalloon.transform.parent = this.transform.parent;
-                _basket.ClearBalloon();
-                _basket.transform.gameObject.SetActive(false);
+                _catchingNet.caughtBalloon.rigidBody.freezeRotation = false;
+                _catchingNet.caughtBalloon.rigidBody.useGravity = true;
+                _catchingNet.caughtBalloon.transform.parent = this.transform.parent;
+                _catchingNet.ClearBalloon();
+                _catchingNet.transform.gameObject.SetActive(false);
                 _isDropping = true;
             }
             if (_droppingTimer > 2)
             {
                 _droppingTimer = 0;
                 _isDropping = false;
-                _basket.transform.gameObject.SetActive(true);
+                _catchingNet.transform.gameObject.SetActive(true);
                 caughtBalloon = false;
             }
             else _droppingTimer += Time.deltaTime;
         }
         
-        if (_basket.holdsBalloon && caughtBalloon == false)
+        if (_catchingNet.holdsBalloon && caughtBalloon == false)
         { 
-            CatchBalloon(_basket.caughtBalloon);
+            CatchBalloon(_catchingNet.caughtBalloon);
             caughtBalloon = true;
         }
+
+        for(int i = 0; i < _balloonCollecter.collectedBalloons.Count; i++)
+        {
+            CollectLetter(_balloonCollecter.collectedBalloons[i].letter);
+            _balloons.Remove(_balloonCollecter.collectedBalloons[i]);
+            Destroy(_balloonCollecter.collectedBalloons[i]);
+        }
+        _balloonCollecter.collectedBalloons.Clear();
 
         for (int i = 0; i < _balloons.Count; i++)
         {
             _balloons[i].Move();
             if(_balloons[i].transform.position.y < 0)
             {
-                if(_balloons[i].hasCorrectLetter == false) SpawnBalloon(_balloons[i].letter);
-                else
-                {
-                    CollectLetter(_balloons[i].letter);
-                }
+                SpawnBalloon(_balloons[i].letter);
                 Destroy(_balloons[i]);
                 _balloons.RemoveAt(i);
             }

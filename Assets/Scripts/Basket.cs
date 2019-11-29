@@ -8,6 +8,7 @@ public class Basket : MonoBehaviour
     public bool holdsBalloon = false;
     public GameObject catchPosObject;
     public Vector3 catchPos;
+    bool usePreciseCathcing = true;
 
     void Start()
     {
@@ -35,8 +36,11 @@ public class Basket : MonoBehaviour
                 Debug.Log("holds a balloon");
                 return;
             }
-            Vector3 difference = other.transform.position - catchPos;
-            if (difference.y < 0) return;
+            if (usePreciseCathcing)
+            {
+                Vector3 difference = other.transform.position - catchPos;
+                if (difference.y < 0) return;
+            }
 
             Debug.Log("caught balloon!");
             caughtBalloon = balloon;
