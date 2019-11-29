@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{9297af85-4f3c-4c48-a54a-efaf98484ede}">
+		<property name="assetPath">
+			<value>Music/Ambiance Balloon Game.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>178.42993197278912</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{6f338255-cdf1-4cc0-aacc-be380f7f7f15}</destination>
+		</relationship>
+	</object>
+</objects>
