@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Audio_Scripts;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -33,6 +34,10 @@ public class BalloonGameHandler : MonoBehaviour
     private bool _isDropping;
     private float _droppingTimer = 0;
     private bool caughtBalloon = false;
+
+    
+    // Audio vars
+    [SerializeField] private SFX sounds;
 
     // Start is called before the first frame update
     void Start()
@@ -112,6 +117,7 @@ public class BalloonGameHandler : MonoBehaviour
             {
                 _collectedLetters.Add(true);
                 displayWord += words[currentWord][i];
+                Debug.Log(displayWord);
             }
             else
             {
@@ -184,10 +190,11 @@ public class BalloonGameHandler : MonoBehaviour
                             else displayWord += letter;
                         }
                         _displayWord.text = displayWord;
-
                         _collectedLetters[i] = true;
                         CheckWin();
                     }
+                    sounds.Play("Letters/" + letter);
+                    Debug.Log("This is char letter: " + letter);
                     return true;
                 }
             }
@@ -236,8 +243,13 @@ public class BalloonGameHandler : MonoBehaviour
     void Win()
     {
         Debug.Log("Win");
+        // Play audio
+        Debug.Log(words[currentWord]);
+        sounds.Play("Words/" + words[currentWord]); // words[currentWord] 
+        
         currentWord++;
         
         if (words.Length > currentWord) LoadNewWord();
+        
     }
 }

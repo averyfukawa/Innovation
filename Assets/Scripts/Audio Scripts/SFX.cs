@@ -7,7 +7,8 @@ namespace Audio_Scripts
     public class SFX : MonoBehaviour
     {
         [FMODUnity.EventRef] public string sfxEvent;
-
+        //public string sfxEvent;
+        
         private bool _isPlaying = false;
 
         [SerializeField] private float clipLength;
@@ -20,11 +21,12 @@ namespace Audio_Scripts
 
         public void Play(string fmodEvent)
         {
+            Debug.Log("Audio is playing");
             if (_isPlaying == false)
             {
-                sfxEvent = "event:/SFX/" + fmodEvent;
+                sfxEvent = "event:/" + fmodEvent;
                 
-                FMODUnity.RuntimeManager.PlayOneShot(sfxEvent, GetComponent<Transform>().position);
+                FMODUnity.RuntimeManager.PlayOneShot(sfxEvent, transform.position);
                 
                 _isPlaying = true;
                 
