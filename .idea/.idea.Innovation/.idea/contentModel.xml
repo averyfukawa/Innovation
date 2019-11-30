@@ -47,7 +47,6 @@
                 <e p="{32e1b64b-3fc0-4380-96ec-0e02bd13d328}.xml" t="Include" />
                 <e p="{36ad4c42-50e6-4101-9ab6-dc992ec1d3b1}.xml" t="Include" />
                 <e p="{3a338d50-d291-4a2e-bac2-0e5f3ec37bdb}.xml" t="Include" />
-                <e p="{3ac04e9c-e0f5-45fd-8764-fb23f0814002}.xml" t="Include" />
                 <e p="{3ff08c37-babf-4181-a346-c010794fb9e3}.xml" t="Include" />
                 <e p="{430c8366-fa66-4aa9-b0a3-7fbe7e44c2b5}.xml" t="Include" />
                 <e p="{489b81be-2684-47e4-b129-63ce53516793}.xml" t="Include" />
@@ -144,6 +143,7 @@
                 <e p="{9684f6f3-404f-44ce-95b9-3aa10bc885bb}.xml" t="Include" />
                 <e p="{9ed86f4a-4439-4349-9418-fd40f9859a73}.xml" t="Include" />
                 <e p="{9f93947b-90cd-405c-80b5-cf9b6974bf2f}.xml" t="Include" />
+                <e p="{aec65e95-08df-4c7e-b494-6af21c2e4eaf}.xml" t="Include" />
                 <e p="{b360720e-8094-4f7a-af68-ff899f739e8f}.xml" t="Include" />
                 <e p="{b6399364-b0c5-493c-b4a4-06f838d59700}.xml" t="Include" />
                 <e p="{bb6e7269-141e-464b-ba90-380af0f1ed1c}.xml" t="Include" />
@@ -928,6 +928,7 @@
         <e p="Scripts" t="Include">
           <e p="Audio Scripts" t="Include">
             <e p="BKM.cs" t="Include" />
+            <e p="DestroyDontDestroy.cs" t="Include" />
             <e p="DontDestroyOnLoad.cs" t="Include" />
             <e p="SFX.cs" t="Include" />
           </e>
