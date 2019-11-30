@@ -17,6 +17,7 @@ public class Balloon : MonoBehaviour
     public float waveAmountY = 0f;
     private Vector3 _facingTowards;
     public bool beingHeld = false;
+    public bool IsInNet = false;
     public bool hasCorrectLetter = false;
 
     public void Init(GameObject go, Vector3 pPos, Vector3 facing, TextMeshPro pTextMesh, char pChar)

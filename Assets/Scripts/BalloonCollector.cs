@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Audio_Scripts;
 
-public class BalloonCollecter : MonoBehaviour
+public class BalloonCollector : MonoBehaviour
 {
     public List<Balloon> collectedBalloons;
 
@@ -23,7 +24,7 @@ public class BalloonCollecter : MonoBehaviour
         Balloon balloon;
         if (other.gameObject.TryGetComponent<Balloon>(out balloon))
         {
-            if(balloon.hasCorrectLetter && !balloon.beingHeld)
+            if(balloon.hasCorrectLetter && !balloon.IsInNet)
             {
                 collectedBalloons.Add(balloon);
             }
