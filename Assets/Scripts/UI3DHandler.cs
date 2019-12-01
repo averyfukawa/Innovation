@@ -10,6 +10,8 @@ public class UI3DHandler : MonoBehaviour
 
     [SerializeField] private SFX sounds;
     [SerializeField] private Material outline;
+    [SerializeField, Range(0.0f, 0.5f)] private float outlineMinWidth = 0.2f;
+    [SerializeField, Range(0.0f, 0.5f)] private float outlineMaxWidth = 0.5f;
     
     private bool _hasHovered = false;
     
@@ -17,7 +19,7 @@ public class UI3DHandler : MonoBehaviour
     void Start()
     {
         startOrientation = controller.transform.forward;
-        outline.SetFloat("_Outline", 0.015f);
+        outline.SetFloat("_Outline", outlineMinWidth);
     }
 
     // Update is called once per frame
@@ -38,14 +40,14 @@ public class UI3DHandler : MonoBehaviour
                     Debug.Log("The Spatial UI was hovered!");
                     sounds.Play("SFX/UI Hover");
                     _hasHovered = true;
-                    outline.SetFloat("_Outline", 0.035f);
+                    outline.SetFloat("_Outline", outlineMaxWidth);
                 }
             }
         }
         else
         {
             _hasHovered = false;
-            outline.SetFloat("_Outline", 0.015f);
+            outline.SetFloat("_Outline", outlineMinWidth);
         }
 
         if(Input.GetMouseButtonDown(0) && Physics.Raycast(controller.transform.position, rayDirection, out hit))

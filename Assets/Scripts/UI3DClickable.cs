@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Audio_Scripts;
 using UnityEngine;
@@ -12,15 +13,13 @@ public class UI3DClickable : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (switchToScene == null)
+            throw new Exception("Scene name not set in " + gameObject.name + "!");
         
+        if (sounds == null)
+            throw new Exception("SFX not set in " + gameObject.name);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    
     public void Activate()
     {
         if(switchToScene != null)
