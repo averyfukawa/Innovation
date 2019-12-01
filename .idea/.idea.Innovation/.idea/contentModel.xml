@@ -144,6 +144,7 @@
                 <e p="{9684f6f3-404f-44ce-95b9-3aa10bc885bb}.xml" t="Include" />
                 <e p="{9ed86f4a-4439-4349-9418-fd40f9859a73}.xml" t="Include" />
                 <e p="{9f93947b-90cd-405c-80b5-cf9b6974bf2f}.xml" t="Include" />
+                <e p="{a85aa6c2-150d-467b-9874-0f1a5e04020b}.xml" t="Include" />
                 <e p="{aacac391-da44-40d4-8c21-1b0fcccd308c}.xml" t="Include" />
                 <e p="{aec65e95-08df-4c7e-b494-6af21c2e4eaf}.xml" t="Include" />
                 <e p="{b360720e-8094-4f7a-af68-ff899f739e8f}.xml" t="Include" />
@@ -933,6 +934,7 @@
         <e p="Scripts" t="Include">
           <e p="Audio Scripts" t="Include">
             <e p="BKM.cs" t="Include" />
+            <e p="ChippyKodyConvo.cs" t="Include" />
             <e p="DestroyDontDestroy.cs" t="Include" />
             <e p="DontDestroyOnLoad.cs" t="Include" />
             <e p="SFX.cs" t="Include" />

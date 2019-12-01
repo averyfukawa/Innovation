@@ -844,6 +844,7 @@ MonoBehaviour:
   _availableWords: 
   _currentWord: 0
   _winAmount: 3
+  winPhrase: Gefeliciteerd! Je hebt alle ballonnen verzameld!
   _displayWord: {fileID: 1172486948}
   sounds: {fileID: 876822987}
 --- !u!1 &654211503
@@ -1578,6 +1579,7 @@ MonoBehaviour:
   _availableWords: 
   _currentWord: 0
   _winAmount: 3
+  winPhrase: Gefeliciteerd! Je hebt alle ballonnen verzameld!
   _displayWord: {fileID: 1172486948}
   sounds: {fileID: 876822987}
 --- !u!1 &1172486947
@@ -2476,6 +2478,66 @@ MonoBehaviour:
   usePerEyeCameras: 0
   useFixedUpdateForTracking: 0
   disableEyeAnchorCameras: 0
+--- !u!1 &1600182604
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1600182607}
+  - component: {fileID: 1600182606}
+  - component: {fileID: 1600182605}
+  m_Layer: 0
+  m_Name: ChippyKody
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1600182605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600182604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f586e335e5ed8942b6cb16895f448e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxEvent: event:/SFX/Alarm Clock
+  clipLength: 10
+--- !u!114 &1600182606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600182604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e151e9a53cebf3845a1f9cba55e4aa77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conversationSounds: {fileID: 1600182605}
+  delayStart: 1
+--- !u!4 &1600182607
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600182604}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1605317690
 PrefabInstance:
   m_ObjectHideFlags: 0
