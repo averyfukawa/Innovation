@@ -27,7 +27,7 @@ public class BalloonGameHandler : MonoBehaviour
     [SerializeField] List<int> _availableWords;
     [SerializeField] int _currentWord = 0;
     [SerializeField] int _winAmount = 3;
-
+    [SerializeField] private string winPhrase = "Gefeliciteerd! Je hebt alle ballonnen verzameld!";
     bool _anyOrder = true;
     int _currentLetter = 0;
     List<bool> _collectedLetters;
@@ -65,7 +65,7 @@ public class BalloonGameHandler : MonoBehaviour
 
         if(_completedGame)
         {
-            _displayWord.text = "Gefeliciteerd! Je hebt alle ballonnen verzameld!";
+            _displayWord.text = winPhrase;
             return;
         }
 
@@ -247,8 +247,16 @@ public class BalloonGameHandler : MonoBehaviour
         balloon.rigidBody.useGravity = false;
         balloon.IsInNet = false;
         Debug.Log("correct letter: " + correct);
+        
+        /*
+        if (correct == false)
+        {
+            sounds.Play("Conversations/wrong");
+        }
+        */
+        
         sounds.Play("Letters/" + balloon.letter);
-
+        
         return correct;
     }
 

@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class UI3DClickable : MonoBehaviour
 {
     [SerializeField] string switchToScene;
-
+    
     [SerializeField] private SFX sounds;
     // Start is called before the first frame update
     void Start()

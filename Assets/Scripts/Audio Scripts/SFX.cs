@@ -21,7 +21,7 @@ namespace Audio_Scripts
 
         public void Play(string fmodEvent)
         {
-            Debug.Log("Audio is playing");
+            Debug.Log("Audio is playing: " + fmodEvent);
             if (_isPlaying == false)
             {
                 sfxEvent = "event:/" + fmodEvent;

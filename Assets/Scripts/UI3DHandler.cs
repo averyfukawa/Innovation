@@ -9,12 +9,15 @@ public class UI3DHandler : MonoBehaviour
     Vector3 startOrientation;
 
     [SerializeField] private SFX sounds;
-
-    private bool hasHovered = false;
+    [SerializeField] private Material outline;
+    
+    private bool _hasHovered = false;
+    
     // Start is called before the first frame update
     void Start()
     {
         startOrientation = controller.transform.forward;
+        outline.SetFloat("_Outline", 0.015f);
     }
 
     // Update is called once per frame
@@ -30,16 +33,20 @@ public class UI3DHandler : MonoBehaviour
             UI3DClickable clickable;
             if (hit.transform.TryGetComponent<UI3DClickable>(out clickable))
             {
-                if (hasHovered == false)
+                if (_hasHovered == false)
                 {
                     Debug.Log("The Spatial UI was hovered!");
                     sounds.Play("SFX/UI Hover");
-                    hasHovered = true;
+                    _hasHovered = true;
+                    outline.SetFloat("_Outline", 0.035f);
                 }
             }
         }
-        else 
-            hasHovered = false;
+        else
+        {
+            _hasHovered = false;
+            outline.SetFloat("_Outline", 0.015f);
+        }
 
         if(Input.GetMouseButtonDown(0) && Physics.Raycast(controller.transform.position, rayDirection, out hit))
         {
