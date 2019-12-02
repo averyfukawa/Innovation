@@ -6,6 +6,7 @@ using Audio_Scripts;
 public class BalloonCollector : MonoBehaviour
 {
     public List<Balloon> collectedBalloons;
+    public ParticleSystem particles;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +28,7 @@ public class BalloonCollector : MonoBehaviour
             if(balloon.hasCorrectLetter && !balloon.IsInNet)
             {
                 collectedBalloons.Add(balloon);
+                particles.Play();
             }
         }
     }
