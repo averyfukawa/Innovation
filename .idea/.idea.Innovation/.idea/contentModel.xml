@@ -105,6 +105,7 @@
               </e>
               <e p="Bank" t="Include">
                 <e p="{810ba543-8c8a-4328-bc4a-12b19b26646f}.xml" t="Include" />
+                <e p="{cc3a06cd-995d-4092-9a63-62661581ee5a}.xml" t="Include" />
               </e>
               <e p="BankFolder" t="Include">
                 <e p="{be56dea7-833d-4402-b05a-7707a21230d0}.xml" t="Include" />
@@ -932,6 +933,10 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="Animation Scripts" t="Include">
+            <e p="InputHandler.cs" t="Include" />
+            <e p="ToyCar.cs" t="Include" />
+          </e>
           <e p="Audio Scripts" t="Include">
             <e p="BKM.cs" t="Include" />
             <e p="ChippyKodyConvo.cs" t="Include" />

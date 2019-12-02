@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1444637087}
-  m_IndirectSpecularColor: {r: 0.22309293, g: 0.5703964, b: 0.3550232, a: 1}
+  m_IndirectSpecularColor: {r: 0.22555806, g: 0.5703643, b: 0.3552487, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -120,6 +120,55 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &4746097 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 65ac73ab3cfc5e04ba83025260ecc4f0,
+    type: 3}
+  m_PrefabInstance: {fileID: 2134514774}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4746101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4746097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 18a8893902dfdf748b7609d73a439713, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchToScene: miniGame_Balloon
+  switchActiveStateObjects: []
+  sounds: {fileID: 4746102}
+  disableThisOnClick: 1
+--- !u!114 &4746102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4746097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f586e335e5ed8942b6cb16895f448e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sfxEvent: event:/SFX/Alarm Clock
+  clipLength: 1
+--- !u!65 &4746103
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4746097}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 119.063835, y: 286.3638, z: 148.9906}
+  m_Center: {x: -9.645867, y: 0, z: -9.060838}
 --- !u!1 &265337587
 GameObject:
   m_ObjectHideFlags: 0
@@ -1728,7 +1777,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1330349425
 Transform:
   m_ObjectHideFlags: 0
@@ -1756,7 +1805,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   switchToScene: miniGame_balloon
+  switchActiveStateObjects: []
   sounds: {fileID: 1330349430}
+  disableThisOnClick: 0
 --- !u!65 &1330349427
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2881,6 +2932,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SpatialUI_Balloon_Minigame
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 65ac73ab3cfc5e04ba83025260ecc4f0,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 65ac73ab3cfc5e04ba83025260ecc4f0,
         type: 3}

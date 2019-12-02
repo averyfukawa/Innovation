@@ -15,7 +15,7 @@ MonoBehaviour:
   SwitchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: Assets\FMOD\Innovate-My-Sound\Innovate-My-Sound.fspro
+  sourceProjectPath: Assets/FMOD/Innovate-My-Sound/Innovate-My-Sound.fspro
   sourceBankPath: Assets\FMOD\Innovate-My-Sound\Build
   SourceBankPathUnformatted: 
   AutomaticEventLoading: 1

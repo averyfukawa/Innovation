@@ -12,9 +12,12 @@ public class UI3DClickable : MonoBehaviour
     [SerializeField] private SFX sounds;
     [SerializeField] bool disableThisOnClick = false;
 
-    // Start is called before the first frame update
-    void Start()
+    private FMOD.Studio.Bus _masterBus;
+
+    private void Start()
     {
+        _masterBus = FMODUnity.RuntimeManager.GetBus("Bus:/");
+        FMODUnity.RuntimeManager.LoadBank("Master Bank");
     }
 
     public void Activate()
@@ -40,7 +43,11 @@ public class UI3DClickable : MonoBehaviour
             }
         }
 
-        if (switchToScene != "") SceneManager.LoadScene(switchToScene);
+        if (switchToScene != "")
+        {
+            SceneManager.LoadScene(switchToScene);
+            _masterBus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        }
         if (disableThisOnClick) this.gameObject.SetActive(false);
     }
 }
