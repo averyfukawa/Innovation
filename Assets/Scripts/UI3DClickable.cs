@@ -9,7 +9,9 @@ public class UI3DClickable : MonoBehaviour
 {
     [SerializeField] string switchToScene;
     [SerializeField] GameObject[] switchActiveStateObjects;
-    [SerializeField] private SFX sounds;
+    [SerializeField] string animationName;
+    [SerializeField] private SFX soundFX;
+    [SerializeField] string soundEvent;
     [SerializeField] bool disableThisOnClick = false;
 
     private FMOD.Studio.Bus _masterBus;
@@ -22,13 +24,11 @@ public class UI3DClickable : MonoBehaviour
 
     public void Activate()
     {
-
         Debug.Log("The Spatial UI was clicked!");
 
-        if (sounds != null)
+        if (soundFX != null)
         {
-            DontDestroyOnLoad(this);
-            sounds.Play("SFX/UI Click");
+            soundFX.Play(soundEvent);
         }
 
         for (int i = 0; i < switchActiveStateObjects.Length; i++)
@@ -46,8 +46,22 @@ public class UI3DClickable : MonoBehaviour
             }
         }
 
+        if (animationName != "")
+        {
+            Animator ani;
+            if (this.TryGetComponent<Animator>(out ani))
+            {
+                ani.enabled = true;
+                ani.Play(animationName, 0, 0);
+            }
+        }
+
         if (switchToScene != "")
         {
+            if(soundFX != null)
+            {
+                DontDestroyOnLoad(this);
+            }
             SceneManager.LoadScene(switchToScene);
             _masterBus.stopAllEvents(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
         }
