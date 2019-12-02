@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.00.00">
 	<object class="AudioFile" id="{0942c837-6d2e-49ab-a369-e981c0851f7e}">
 		<property name="assetPath">
-			<value>SFX/Voices/UI Commands/play again.wav</value>
+			<value>SFX/Voices/Conversation/play again.wav</value>
 		</property>
 		<property name="frequencyInKHz">
 			<value>44.0999985</value>
