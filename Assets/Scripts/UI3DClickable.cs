@@ -22,11 +22,14 @@ public class UI3DClickable : MonoBehaviour
 
     public void Activate()
     {
-        DontDestroyOnLoad(this);
 
         Debug.Log("The Spatial UI was clicked!");
 
-        if (sounds != null) sounds.Play("SFX/UI Click");
+        if (sounds != null)
+        {
+            DontDestroyOnLoad(this);
+            sounds.Play("SFX/UI Click");
+        }
 
         for (int i = 0; i < switchActiveStateObjects.Length; i++)
         {

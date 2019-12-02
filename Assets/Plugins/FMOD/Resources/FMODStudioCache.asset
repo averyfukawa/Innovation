@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: event:/Letters/b
   guid: 9f9ab89104b5364a86e4c0b14ddb80b6
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -124,7 +124,7 @@ MonoBehaviour:
   Path: event:/Letters/e
   guid: bd34d2dfc20ac44f9a27e8da3862f0db
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -147,7 +147,7 @@ MonoBehaviour:
   Path: event:/Letters/q
   guid: 145bc0ed2ceab246b49633529e770f84
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -209,7 +209,7 @@ MonoBehaviour:
   Path: event:/Letters/a
   guid: fe1e452a49eb8d44b3a95a287915c40c
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -232,7 +232,7 @@ MonoBehaviour:
   Path: event:/Letters/u
   guid: 7a0aaf0266539141878e33ea5633ee83
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -255,7 +255,7 @@ MonoBehaviour:
   Path: event:/Balloon Ambience
   guid: 67e992c9a1f5524f9f0de3150249f6e6
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -278,7 +278,7 @@ MonoBehaviour:
   Path: event:/Words/lila
   guid: 4d1e4852d0bfb940bdfc3e310f8cbb97
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -319,7 +319,7 @@ MonoBehaviour:
   Path: event:/Words/rood
   guid: d54b61faaf0d0f4a9740d81c8b40d5e1
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -395,7 +395,7 @@ MonoBehaviour:
   Min: 0
   Max: 2
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-7501814874784096735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -428,7 +428,7 @@ MonoBehaviour:
   Path: event:/Letters/y
   guid: 1cbd92ec6eadc94a8150e6492a21afb6
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -469,7 +469,7 @@ MonoBehaviour:
   Path: event:/Letters/g
   guid: 604dced60e95134488045d58a4bd5a31
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -492,7 +492,7 @@ MonoBehaviour:
   Path: event:/Conversations/tutorial
   guid: 5229059086e3754795ae81189ca1eec9
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -585,7 +585,7 @@ MonoBehaviour:
   Path: event:/SFX/Toy Blocks
   guid: 5961044e70e60c42ab4c427e67d0049a
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -628,7 +628,7 @@ MonoBehaviour:
   lastModified: 637108792218514573
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-5974073765667119017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -662,7 +662,7 @@ MonoBehaviour:
   Path: event:/Letters/f
   guid: 832e1393fa40124cbb91da0593a84826
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -702,7 +702,7 @@ MonoBehaviour:
   Path: event:/Conversations/go back
   guid: 4c8db5124515ac45a1481a0edffd07a0
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -743,7 +743,7 @@ MonoBehaviour:
   Path: event:/Letters/n
   guid: a30a6ed0a4045d4d85b2335eb2329d85
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -783,7 +783,7 @@ MonoBehaviour:
   Path: event:/Conversations/wrong
   guid: 10de40e62b7dd7429348c5c0f5584d20
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -806,7 +806,7 @@ MonoBehaviour:
   Path: event:/Letters/r
   guid: e00cc7d83bf62449a16c68ca550c2286
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -863,7 +863,7 @@ MonoBehaviour:
   Path: event:/Words/geel
   guid: 4cede48d4fc0344f98c5f05e96ba868d
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -886,7 +886,7 @@ MonoBehaviour:
   Path: event:/Words/grijs
   guid: 7d6789e56814fa409f15a2c2f0cf087b
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -962,7 +962,7 @@ MonoBehaviour:
   Path: event:/Conversations/inactive
   guid: 122e9ae191d10a4faf511cc5eb5bd8be
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -985,7 +985,7 @@ MonoBehaviour:
   Path: event:/Letters/v
   guid: 69dc178e3ab25e4e9364010a808f5a2c
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1008,7 +1008,7 @@ MonoBehaviour:
   Path: event:/Letters/x
   guid: 92e8cf852d42f249ab6d2ee099c7c68a
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1031,7 +1031,7 @@ MonoBehaviour:
   Path: event:/SFX/UI Hover
   guid: 7b94939fcd905c4080b5cf9b6974bf2f
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1071,7 +1071,7 @@ MonoBehaviour:
   Path: event:/SFX/Alarm Clock
   guid: f2fb491627ac7149922acd730f2caf14
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1110,7 +1110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: Assets/FMOD/Innovate-My-Sound/Build/Desktop/Master Bank.strings.bank
   SubDir: 
-  lastModified: 637108792218564581
+  lastModified: 637108301051459862
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -1148,7 +1148,7 @@ MonoBehaviour:
   Path: event:/Letters/d
   guid: d24475d321c16e42b9992e657345f1cc
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1171,7 +1171,7 @@ MonoBehaviour:
   Path: event:/Letters/m
   guid: 40a619915d123143a3e01188bfc3fd8c
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1194,7 +1194,7 @@ MonoBehaviour:
   Path: event:/Letters/h
   guid: 0e7260b394807a4faf68ff899f739e8f
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1217,7 +1217,7 @@ MonoBehaviour:
   Path: event:/Letters/p
   guid: 2e66e3d25e226142bd2ca7d4f094fce2
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1240,7 +1240,7 @@ MonoBehaviour:
   Path: event:/Conversations/tutorial inactive
   guid: 828e56fbce9e4040a0f42c137c7af0f8
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1349,7 +1349,7 @@ MonoBehaviour:
   Path: event:/Letters/i
   guid: 87c2f44f4011b547bcdb7fb4011fa471
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1405,7 +1405,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: -2160993435758502061}
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   EditorEvents:
   - {fileID: 5147043972616070319}
   - {fileID: 3920695307542184785}
@@ -1466,10 +1466,10 @@ MonoBehaviour:
   - {fileID: 5217724809232983762}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   StringsBanks:
   - {fileID: -2160993435758502061}
-  stringsBankWriteTime: 637108792218564581
+  stringsBankWriteTime: 637108301051459862
   cacheVersion: 3
 --- !u!114 &185240615176692847
 MonoBehaviour:
@@ -1521,7 +1521,7 @@ MonoBehaviour:
   Path: event:/Letters/l
   guid: a808e4f101ec97459581b06ed61e2162
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1562,12 +1562,12 @@ MonoBehaviour:
   Path: event:/SFX/UI Click
   guid: 196818715a5bdf4d9d6190ba5370c194
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: -7512485512762072051}
+  - {fileID: 7901720324204602062}
   MinDistance: 1
   MaxDistance: 20
   Length: 81
@@ -1586,7 +1586,7 @@ MonoBehaviour:
   Path: event:/SFX/Toy Car
   guid: 5b6b627a4742b8419954950c72227ebc
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1609,7 +1609,7 @@ MonoBehaviour:
   Path: event:/Words/paars
   guid: 1c4016291f4e6343b163d874182ae174
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1667,7 +1667,7 @@ MonoBehaviour:
   Path: event:/Letters/o
   guid: 4a6fd89e394449439418fd40f9859a73
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1690,7 +1690,7 @@ MonoBehaviour:
   Path: event:/Words/blauw
   guid: 290fbcce921d93498ff1c45d7af86e40
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1765,7 +1765,7 @@ MonoBehaviour:
   Path: event:/Letters/t
   guid: bcd80d6eba68fa4e99a249ee43c4c6e2
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1805,7 +1805,7 @@ MonoBehaviour:
   Path: event:/Letters/j
   guid: 8280f30f14cc7e4180f64384453acf81
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1845,7 +1845,7 @@ MonoBehaviour:
   Path: event:/Letters/s
   guid: 7ec29d383c14cf48b44ea49e8a8b5350
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1942,7 +1942,7 @@ MonoBehaviour:
   Path: event:/Words/oranje
   guid: 399dd8eab88b4248b48382283e2795c8
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1965,7 +1965,7 @@ MonoBehaviour:
   Path: event:/SFX/Books sliding
   guid: dd4581e3916f774d9a806708452443c3
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1988,7 +1988,7 @@ MonoBehaviour:
   Path: event:/Conversations/try again
   guid: 91c3caaa44dad4408c211b0fcccd308c
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2029,7 +2029,7 @@ MonoBehaviour:
   Path: event:/Words/wit
   guid: 06c019c6724d3f449b85c863fa828752
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2103,7 +2103,7 @@ MonoBehaviour:
   Path: event:/Letters/k
   guid: de6aea0fcf647e43a120bd8a92123c29
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2178,7 +2178,7 @@ MonoBehaviour:
   Path: event:/Words/zwart
   guid: 649339b6c5b03c49b4a406f838d59700
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2201,7 +2201,7 @@ MonoBehaviour:
   Path: event:/Words/bruin
   guid: 40024bd52803014a89e7e88db583699f
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2224,12 +2224,12 @@ MonoBehaviour:
   Path: event:/BKM
   guid: 30ca0b1008dad54582f79c6e9753b6e2
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 7191376808834150905}
+  - {fileID: 7736744593232145771}
   MinDistance: 0
   MaxDistance: 0
   Length: 200711
@@ -2266,7 +2266,7 @@ MonoBehaviour:
   Path: event:/Conversations/mission
   guid: c2a65aa80d157b4698740f1a5e04020b
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2289,7 +2289,7 @@ MonoBehaviour:
   Path: event:/Words/roze
   guid: e797a5c5d3783b46befe1240eb33c625
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2347,7 +2347,7 @@ MonoBehaviour:
   Path: event:/Letters/c
   guid: 739abd54e8bf6442ac51665b433ad996
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2370,7 +2370,7 @@ MonoBehaviour:
   Path: event:/Letters/w
   guid: 64ee9b8bc8da1d4f94562c4f13c3d31e
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2395,6 +2395,24 @@ MonoBehaviour:
   Max: 3
   Default: 0
   Exists: 0
+--- !u!114 &5673069009880329252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master Bank.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/Innovate-My-Sound/Build/Desktop/Master Bank.bank
+  SubDir: 
+  lastModified: 637108301051449887
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &5983572670382997005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2427,7 +2445,7 @@ MonoBehaviour:
   Path: event:/SFX/Rubber Duck
   guid: 7d0fabf7d4f81d4e9eeff0220edcde59
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2555,7 +2573,7 @@ MonoBehaviour:
   Min: 0
   Max: 3
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &7363149182130551779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2571,7 +2589,7 @@ MonoBehaviour:
   Path: event:/Letters/z
   guid: f3f684964f40ce4495b93aa10bc885bb
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2597,6 +2615,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &7736744593232145771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BKM/Song
+  m_EditorClassIdentifier: 
+  Name: Song
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 1
 --- !u!114 &7737158844029060638
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2612,7 +2647,7 @@ MonoBehaviour:
   Path: event:/SFX/Window Sound
   guid: 69726ebb1e144b46ba90380af0f1ed1c
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2638,6 +2673,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &7901720324204602062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/UI Click/Click
+  m_EditorClassIdentifier: 
+  Name: Click
+  Min: 0
+  Max: 2
+  Default: 0
+  Exists: 1
 --- !u!114 &7935038380077058383
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2671,7 +2723,7 @@ MonoBehaviour:
   Path: event:/SFX/Balloon Pop
   guid: dfdf5e7753a61c429cb31c224c389d5e
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2747,7 +2799,7 @@ MonoBehaviour:
   Path: event:/Conversations/affirmations
   guid: 955ec6aedf087e4cb4946af21c2e4eaf
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2770,7 +2822,7 @@ MonoBehaviour:
   Path: event:/Words/groen
   guid: 557656cc8934a74b892a9233e4e1d20c
   Banks:
-  - {fileID: -6093577880168277174}
+  - {fileID: 5673069009880329252}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1

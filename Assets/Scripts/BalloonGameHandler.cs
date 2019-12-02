@@ -78,7 +78,7 @@ public class BalloonGameHandler : MonoBehaviour
         {
             LoadNextWord();
         }
-        if (Input.GetKeyDown(KeyCode.W))
+        if (OVRInput.GetUp(OVRInput.RawButton.X) || Input.GetKeyDown(KeyCode.W))
         {
             Win();
         }
@@ -98,7 +98,7 @@ public class BalloonGameHandler : MonoBehaviour
         }
         _balloonCollecter.collectedBalloons.Clear();
 
-        if (Input.GetKeyDown(KeyCode.A) || _isDropping || OVRInput.Get(OVRInput.Button.One))
+        if ( (Input.GetKeyDown(KeyCode.A) || OVRInput.Get(OVRInput.Button.One)) || _isDropping)
         {
             if (_catchingNet.holdsBalloon == true)
             {
@@ -120,6 +120,10 @@ public class BalloonGameHandler : MonoBehaviour
             else _droppingTimer += Time.deltaTime;
         }
 
+        //BALLOON
+        //POPPING
+        //HERE
+        //=====================================================================
         if (_catchingNet.holdsBalloon && (Input.GetKeyDown(KeyCode.R) || OVRInput.Get(OVRInput.Button.Two)))
         {
             if (_catchingNet.caughtBalloon.hasCorrectLetter)

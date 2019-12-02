@@ -48,7 +48,7 @@ public class UI3DHandler : MonoBehaviour
             outline.SetFloat("_Outline", outlineMinWidth);
         }
 
-        if(Input.GetMouseButtonDown(0) && Physics.Raycast(controller.transform.position, rayDirection, out hit))
+        if((Input.GetMouseButtonDown(0) || OVRInput.Get(OVRInput.Button.One)) && Physics.Raycast(controller.transform.position, rayDirection, out hit))
         {
             UI3DClickable clickable;
             if(hit.transform.TryGetComponent<UI3DClickable>(out clickable))
