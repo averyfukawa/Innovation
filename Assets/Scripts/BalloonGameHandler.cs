@@ -8,6 +8,7 @@ using UnityEngine.Serialization;
 public class BalloonGameHandler : MonoBehaviour
 {
     [SerializeField] GameObject _balloonPrefab;
+    [SerializeField] GameObject _colorVisualiser;
     [SerializeField] GameObject _player;
     [SerializeField] Basket _catchingNet;
     [SerializeField] BalloonCollector _balloonCollecter;
@@ -28,6 +29,7 @@ public class BalloonGameHandler : MonoBehaviour
     [SerializeField] int _currentWord = 0;
     [SerializeField] int _winAmount = 3;
     [SerializeField] private string winPhrase = "Gefeliciteerd! Je hebt alle ballonnen verzameld!";
+    [SerializeField] GameObject disabledTillWinUI;
     bool _anyOrder = true;
     int _currentLetter = 0;
     List<bool> _collectedLetters;
@@ -38,6 +40,7 @@ public class BalloonGameHandler : MonoBehaviour
     private float _droppingTimer = 0;
     private bool _caughtBalloon = false;
     private bool _completedGame = false;
+    private Vector2 LastSpawnPos = new Vector2();
 
     
     // Audio vars
@@ -46,6 +49,8 @@ public class BalloonGameHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        disabledTillWinUI.SetActive(false);
+
         _balloons = new List<Balloon>();
         if(_availableWords == null || (_availableWords != null && _availableWords.Count == 0))
         {
@@ -97,9 +102,9 @@ public class BalloonGameHandler : MonoBehaviour
         {
             if (_catchingNet.holdsBalloon == true)
             {
-                _catchingNet.caughtBalloon.rigidBody.freezeRotation = false;
                 _catchingNet.caughtBalloon.rigidBody.useGravity = true;
                 _catchingNet.caughtBalloon.transform.parent = this.transform.parent;
+                _catchingNet.caughtBalloon.rigidBody.constraints = RigidbodyConstraints.None;
                 _catchingNet.caughtBalloon.IsInNet = false;
                 _catchingNet.ClearBalloon();
                 _catchingNet.transform.gameObject.SetActive(false);
@@ -154,7 +159,10 @@ public class BalloonGameHandler : MonoBehaviour
     {
         RemoveAllBalloons();
 
-        if (_wordColors.Length > _currentWord) _balloonPrefab.GetComponent<MeshRenderer>().sharedMaterial.SetColor("_BaseColor", _wordColors[_currentWord]);
+        if (_wordColors.Length > _currentWord)
+        {
+            _balloonPrefab.GetComponent<MeshRenderer>().sharedMaterial.SetColor("_BaseColor", _wordColors[_currentWord]);
+        }
 
         _collectedLetters = new List<bool>();
         _currentLetter = 0;
@@ -233,6 +241,20 @@ public class BalloonGameHandler : MonoBehaviour
         spawnPos.x *= _spawnRange;
         spawnPos.y *= _spawnRange;
 
+        if(spawnPos == LastSpawnPos)
+        {
+            int rand = Random.Range(0, 3);
+            if (rand == 1) spawnPos.x *= -1;
+            else if (rand == 2) spawnPos.y *= -1;
+            else
+            {
+                spawnPos.x *= -1;
+                spawnPos.y *= -1;
+            }
+        }
+
+        LastSpawnPos = spawnPos;
+
         return SpawnBalloon(new Vector3(spawnPos.x, Random.Range(_spawnHeight-_spawnHeightRange, _spawnHeight+_spawnHeightRange), spawnPos.y), pChar);
     }
 
@@ -243,8 +265,8 @@ public class BalloonGameHandler : MonoBehaviour
         balloon.prefab.transform.parent = _player.transform;
         balloon.beingHeld = true;
         balloon.hasCorrectLetter = correct;
-        balloon.rigidBody.freezeRotation = true;
         balloon.rigidBody.useGravity = false;
+        balloon.rigidBody.constraints = RigidbodyConstraints.FreezeAll;
         balloon.IsInNet = false;
         Debug.Log("correct letter: " + correct);
         
@@ -337,7 +359,9 @@ public class BalloonGameHandler : MonoBehaviour
         if (_winAmount == 0)
         {
             _completedGame = true;
+            if(_colorVisualiser != null) _colorVisualiser.SetActive(false);
             RemoveAllBalloons();
+            disabledTillWinUI.SetActive(true);
             return;
         }
 

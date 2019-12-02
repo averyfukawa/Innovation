@@ -6,7 +6,6 @@ using UnityEngine;
 public class UI3DHandler : MonoBehaviour
 {
     [SerializeField] GameObject controller;
-    Vector3 startOrientation;
 
     [SerializeField] private SFX sounds;
     [SerializeField] private Material outline;
@@ -18,7 +17,6 @@ public class UI3DHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        startOrientation = controller.transform.forward;
         outline.SetFloat("_Outline", outlineMinWidth);
     }
 
