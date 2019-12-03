@@ -12,7 +12,7 @@ public class Balloon : MonoBehaviour
     private float addToTime;
     public Vector3 position;
     public Vector3 wavyPosition;
-    public char letter;
+    public string letters;
     public float waveAmountX = 0f;
     public float waveAmountY = 0f;
     private Vector3 _facingTowards;
@@ -20,7 +20,7 @@ public class Balloon : MonoBehaviour
     public bool IsInNet = false;
     public bool hasCorrectLetter = false;
 
-    public void Init(GameObject go, Vector3 pPos, Vector3 facing, TextMeshPro pTextMesh, char pChar)
+    public void Init(GameObject go, Vector3 pPos, Vector3 facing, TextMeshPro pTextMesh, string pLetters)
     {
         rigidBody = this.GetComponent<Rigidbody>();
         prefab = go;
@@ -32,10 +32,10 @@ public class Balloon : MonoBehaviour
         _facingTowards = facing;
         addToTime = Random.Range(0, Mathf.PI);
 
-        letter = pChar;
+        letters = pLetters;
         
         textMesh = pTextMesh;
-        textMesh.text = pChar.ToString();
+        textMesh.text = letters;
 
         prefab.transform.position = position + wavyPosition;
     }

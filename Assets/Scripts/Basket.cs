@@ -8,7 +8,7 @@ public class Basket : MonoBehaviour
     public bool holdsBalloon = false;
     public GameObject catchPosObject;
     public Vector3 catchPos;
-    bool usePreciseCathcing = true;
+    bool usePreciseCathcing = false;
 
     void Start()
     {
