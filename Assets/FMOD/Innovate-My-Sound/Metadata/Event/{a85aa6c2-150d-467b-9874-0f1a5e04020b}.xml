@@ -94,13 +94,10 @@
 	<object class="MixerBusPanner" id="{deeede9d-a804-4287-87f4-89622245df1b}" />
 	<object class="SingleSound" id="{8bde8b03-d671-4311-91d4-a3cb32fbc4ee}">
 		<property name="start">
-			<value>7.1000000000000005</value>
+			<value>6.5</value>
 		</property>
 		<property name="length">
 			<value>2.0512244897959184</value>
-		</property>
-		<property name="volume">
-			<value>-4</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{9e4d6d21-6370-4c0e-88b9-425c431e0168}</destination>
@@ -108,27 +105,18 @@
 	</object>
 	<object class="SingleSound" id="{1fa20775-1d3c-4aa5-8eac-6002d4d0ade3}">
 		<property name="start">
-			<value>9.5999999999999979</value>
+			<value>9</value>
 		</property>
 		<property name="length">
 			<value>3.3092970521541951</value>
-		</property>
-		<property name="volume">
-			<value>-4</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{f3b01e65-d32e-4d9c-9667-9b6ec786b35f}</destination>
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{4d6397c0-3a3c-4524-8b78-af414f567854}">
-		<property name="start">
-			<value>0.60000000000000009</value>
-		</property>
 		<property name="length">
 			<value>6.0744897959183675</value>
-		</property>
-		<property name="volume">
-			<value>-2</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{70c33f13-9baa-49f2-bd62-a255ce7f1c38}</destination>

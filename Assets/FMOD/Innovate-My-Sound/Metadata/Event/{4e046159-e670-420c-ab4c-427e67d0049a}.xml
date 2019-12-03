@@ -97,9 +97,6 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{3b3f415e-bad2-4e21-8768-ce2ccb157e8a}">
-		<property name="volume">
-			<value>1.5</value>
-		</property>
 		<property name="name">
 			<value>Audio 1</value>
 		</property>
@@ -124,25 +121,10 @@
 	<object class="MixerBusEffectChain" id="{6cc638f4-ccda-4ff2-810c-6e7a69121191}">
 		<relationship name="effects">
 			<destination>{64e34704-a040-4dac-b083-e8e4ac489c34}</destination>
-			<destination>{3257d469-2e7c-42ba-bb2d-e59e63eedea9}</destination>
-			<destination>{4246db4a-4ded-4226-8663-b95132719a75}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{2c6c67f4-09c6-4904-9e9b-3c3a9defe85a}" />
 	<object class="MixerBusFader" id="{bbec1846-fea8-4c82-9471-f524ca894532}" />
 	<object class="SpatialiserEffect" id="{6ac2aec2-13d5-401f-bb27-78a350153f2e}" />
 	<object class="MixerBusFader" id="{64e34704-a040-4dac-b083-e8e4ac489c34}" />
-	<object class="LowpassEffect" id="{3257d469-2e7c-42ba-bb2d-e59e63eedea9}">
-		<property name="cutoff">
-			<value>18600</value>
-		</property>
-	</object>
-	<object class="CompressorEffect" id="{4246db4a-4ded-4226-8663-b95132719a75}">
-		<property name="threshold">
-			<value>-25</value>
-		</property>
-		<property name="attackTime">
-			<value>6.80000019</value>
-		</property>
-	</object>
 </objects>

@@ -5,7 +5,7 @@
 			<value>Balloon Pop</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>2</value>
 		</property>
 		<relationship name="folder">
 			<destination>{4faf4478-be9c-413f-8b86-cd6bbf61519a}</destination>
@@ -118,6 +118,7 @@
 	<object class="MixerBusEffectChain" id="{6e0699eb-cf00-4d92-bb22-73a8766cac9d}">
 		<relationship name="effects">
 			<destination>{7b2287b0-c3f7-43d1-8fc2-45f1f26177c5}</destination>
+			<destination>{7a1ad8ee-0bdc-4eaa-b749-c522f43f75fe}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{34c1785f-3f66-425d-9fb0-a506fd257d23}" />
@@ -128,17 +129,11 @@
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{00827106-02a3-40c1-9b41-0a8d6c586d61}">
-		<property name="volume">
-			<value>-5.5</value>
-		</property>
 		<relationship name="audioFile">
 			<destination>{0a1da956-6077-43ac-b160-5ab89f958b31}</destination>
 		</relationship>
 	</object>
 	<object class="SingleSound" id="{219e4faf-29b2-4f49-9403-e9677514a2b2}">
-		<property name="volume">
-			<value>-3.5</value>
-		</property>
 		<relationship name="audioFile">
 			<destination>{51bca1c9-fdb2-4670-94a3-ce426a22cbb3}</destination>
 		</relationship>
@@ -150,5 +145,6 @@
 	</object>
 	<object class="MixerBusPanner" id="{f9332fc0-431a-4dba-a9f1-665da5f9ca7a}" />
 	<object class="MixerBusFader" id="{7b2287b0-c3f7-43d1-8fc2-45f1f26177c5}" />
+	<object class="SpatialiserEffect" id="{7a1ad8ee-0bdc-4eaa-b749-c522f43f75fe}" />
 	<object class="MixerBusFader" id="{06aa860b-b90d-4a19-8a79-bd88de1e2a56}" />
 </objects>
