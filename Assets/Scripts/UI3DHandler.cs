@@ -9,8 +9,8 @@ public class UI3DHandler : MonoBehaviour
 
     [SerializeField] private SFX sounds;
     [SerializeField] private Material outline;
-    [SerializeField, Range(0.0f, 0.5f)] private float outlineMinWidth = 0.2f;
-    [SerializeField, Range(0.0f, 0.5f)] private float outlineMaxWidth = 0.5f;
+    [SerializeField, Range(0.0f, 2.0f)] private float outlineMinWidth = 0.2f;
+    [SerializeField, Range(0.0f, 2.0f)] private float outlineMaxWidth = 0.5f;
     
     private bool _hasHovered = false;
     
