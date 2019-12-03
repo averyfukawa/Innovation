@@ -1231,7 +1231,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sfxEvent: event:/SFX/Alarm Clock
-  clipLength: 0.65
+  clipLength: 0.1
 --- !u!4 &543673321
 Transform:
   m_ObjectHideFlags: 0
@@ -1668,32 +1668,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 678225789}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &707464686 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 75dfe57d0720e0f4aa2623a6a7a64908,
-    type: 3}
-  m_PrefabInstance: {fileID: 112993171}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &707464687 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 75dfe57d0720e0f4aa2623a6a7a64908,
     type: 3}
   m_PrefabInstance: {fileID: 112993171}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &707464688
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 707464686}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f586e335e5ed8942b6cb16895f448e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sfxEvent: event:/SFX/Toy Blocks
-  clipLength: 0
 --- !u!1 &863221865
 GameObject:
   m_ObjectHideFlags: 0
@@ -3211,7 +3191,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1742889834}
   - component: {fileID: 1742889833}
-  - component: {fileID: 1742889832}
   m_Layer: 0
   m_Name: ParentBlocks
   m_TagString: Untagged
@@ -3219,24 +3198,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1742889832
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1742889831}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18a8893902dfdf748b7609d73a439713, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  switchToScene: 
-  switchActiveStateObjects: []
-  animationName: 
-  soundFX: {fileID: 543673320}
-  soundEvent: SFX/Toy Blocks
-  disableThisOnClick: 0
 --- !u!65 &1742889833
 BoxCollider:
   m_ObjectHideFlags: 0
