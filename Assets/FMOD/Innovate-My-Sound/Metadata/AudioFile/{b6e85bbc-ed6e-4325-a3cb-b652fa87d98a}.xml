@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{b6e85bbc-ed6e-4325-a3cb-b652fa87d98a}">
+		<property name="assetPath">
+			<value>SFX/Words/Klanken/b r ui n.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>2.1306802721088434</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{6f338255-cdf1-4cc0-aacc-be380f7f7f15}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="EncodableAsset" id="{b5ce7760-2ad6-4559-94be-cb42e18afcfc}">
+		<property name="assetPath">
+			<value>SFX/Words/Klanken/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{6f338255-cdf1-4cc0-aacc-be380f7f7f15}</destination>
+		</relationship>
+	</object>
+</objects>
