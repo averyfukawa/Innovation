@@ -53,7 +53,7 @@ public class BalloonGameHandler : MonoBehaviour
 
         _balloons = new List<Balloon>();
 
-        library.HasCompiled();
+        library.CompileLibrary();
 
         for(int i = 0; i < library.words.Length; i++)
         {
@@ -231,8 +231,13 @@ public class BalloonGameHandler : MonoBehaviour
         //else spawnX = -_spawnRange;
         //if (spawnZ == 0) spawnZ = _spawnRange;
         //else spawnZ = -_spawnRange;
-        float spawnX = Random.Range(-2, 3);
-        float spawnZ = Random.Range(-2, 3);
+        float spawnX;
+        float spawnZ;
+        do
+        {
+            spawnX = Random.Range(-2, 3);
+            spawnZ = Random.Range(-2, 3);
+        } while (spawnX == 0 && spawnZ == 0);
 
         Vector2 spawnPos = new Vector2(spawnX, spawnZ);
         spawnPos.Normalize();
