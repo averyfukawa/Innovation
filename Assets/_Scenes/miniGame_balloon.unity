@@ -1851,7 +1851,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 678253033}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.4, y: 0, z: 0.4}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4000010888670675}
@@ -2136,7 +2136,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 887409435}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.4, y: 0, z: 0.4}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4000010426677025}
@@ -8261,7 +8261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd6daede0d7697847a4806c3af3eb4ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 1575869687}
+  controller: {fileID: 358702056}
   sounds: {fileID: 876822987}
   outline: {fileID: 2100000, guid: 13dee35543a19e447b8a8cf80cb23568, type: 2}
   outlineMinWidth: 0.2
@@ -8899,7 +8899,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1575869688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8981,7 +8981,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1594308573
 Transform:
   m_ObjectHideFlags: 0
@@ -18177,7 +18177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   switchToScene: 
   switchActiveStateObjects:
-  - {fileID: 1153735821}
+  - {fileID: 586981218}
   - {fileID: 1600182604}
   - {fileID: 403735323}
   animationName: 
